@@ -20,7 +20,7 @@ agcensus_download <- read.csv("https://nextcloud.sesync.org/index.php/s/THpGDspG
 #removes ancillary columns at the end of the agcensus_download
 agcensus_download <- agcensus_download[,1:25]
 
-eqip <- read.csv("https://nextcloud.sesync.org/index.php/s/bgWSzqdqYDifJwz/download")
+xx_eqip <- read.csv("https://nextcloud.sesync.org/index.php/s/bgWSzqdqYDifJwz/download")
 
 commodity <- read.csv("https://dmine.io/waf/USDA/USDA/crop_indemnity_originals_aggregated/commodities.csv")
 xx_damage <- read.csv("/dmine/data/USDA/crop_indemnity_originals_aggregated/commodities_damagecause.csv")
