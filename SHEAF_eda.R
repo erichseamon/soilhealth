@@ -1,3 +1,8 @@
+#--SHEAF_eda.R
+#--loads some initial datasets and merges them, combines with spatial data for visualization
+#--author: Erich Seamon, University of Idaho
+#--date: October 2018
+
 library(rgdal)
 library(leaflet)
 library(maptools)
