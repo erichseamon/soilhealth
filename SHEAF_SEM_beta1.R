@@ -1,8 +1,3 @@
-#--SHEAF_eda.R
-#--loads some initial datasets and merges them, combines with spatial data for visualization
-#--author: Erich Seamon, University of Idaho
-#--date: October 2018
-
 library(rgdal)
 library(leaflet)
 library(maptools)
@@ -14,25 +9,15 @@ library(RColorBrewer)
 library(raster)
 library (RCurl)
 
-#agcensus load
+
 agcensus_download <- read.csv("https://nextcloud.sesync.org/index.php/s/THpGDspGXFtLSGF/download")
 
 #removes ancillary columns at the end of the agcensus_download
 agcensus_download <- agcensus_download[,1:25]
 
-#eqip load
-xx_eqip <- read.csv("https://nextcloud.sesync.org/index.php/s/bgWSzqdqYDifJwz/download")
-
-#census load
-census <- read.csv("https://nextcloud.sesync.org/index.php/s/C3jHtLfRToPkrJa/download")
-
-
-temp = list.files(pattern="*.csv")
-myfiles = lapply(temp, read.delim)
-
+eqip <- read.csv("https://nextcloud.sesync.org/index.php/s/bgWSzqdqYDifJwz/download")
 
 commodity <- read.csv("https://dmine.io/waf/USDA/USDA/crop_indemnity_originals_aggregated/commodities.csv")
-
 xx_damage <- read.csv("/dmine/data/USDA/crop_indemnity_originals_aggregated/commodities_damagecause.csv")
 
 #want to save the eqip data as an RDS file for faster usage?
